@@ -18,11 +18,11 @@ public class SpringEventListenerDemo {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyApplicationListener.class);
 
         // 增加监听器
-//        context.addApplicationListener(new MyApplicationListener());
-        // 注册 Configuration 的方式
-//        context.register(MyApplicationListener.class);
-        // 上下文启动
-//        context.refresh();
+		context.addApplicationListener(new MyApplicationListener());
+		// 注册 Configuration 的方式
+		context.register(MyApplicationListener.class);
+		// 上下文启动
+		// context.refresh();
 
         // 发布事件
         context.publishEvent(new MyApplicationEvent("Hello,World"));
